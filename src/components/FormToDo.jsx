@@ -44,7 +44,7 @@ export const FormToDo = () => {
             <div className="container">
                 <form className="my-5" onSubmit={handleSubmit}>
                     <div className="row justify-content-md-center ">
-                        <div className="col-6">
+                        <div className="col-9 col-lg-6 col-xl-6">
                             <input
                                 type="text"
                                 className="form-control"
@@ -53,7 +53,7 @@ export const FormToDo = () => {
                                 onChange={(e) => setUserInput(e.target.value)}
                             />
                         </div>
-                        <div className="col-1">
+                        <div className="col-3 col-lg-2 col-xl-1">
                             <input type="submit" value="Add" className="form-control btn btn-primary" />
                         </div>
                     </div>
@@ -61,7 +61,7 @@ export const FormToDo = () => {
             </div>
             <div className="container ">
                 <div className="row justify-content-md-center">
-                    <div className="col-7">
+                    <div className=" col-12 col-lg-8 col-xl-8 ">
                         {
                             todoList.map(item => (
                                 <ToDo item={item} key={item.id} onUpdate={handleUpdate} onDelete={handleDelete} onTerminate={handleTerminate} />

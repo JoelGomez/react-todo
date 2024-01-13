@@ -34,11 +34,11 @@ export const ToDo = ({ item, onUpdate, onDelete }) => {
 
         return (
             <form onSubmit={handleSubmit} >
-                <div key={item.id} className='row border-bottom py-3'>
-                    <div className='col-10'>
+                <div key={item.id} className='row border-bottom py-3 bg-info'>
+                    <div className='col-8'>
                         <input type='text' className='form-control form-control-sm ' onChange={handleChangeToDo} value={newValue}></input>
                     </div>
-                    <div className="col-2">
+                    <div className="col-4">
                         <div className='float-end px-3'>
                             <i className="fa-solid fa-retweet update-icon" onClick={handleUpdateToDo}></i>
                         </div>
@@ -56,10 +56,10 @@ export const ToDo = ({ item, onUpdate, onDelete }) => {
         return (
             <>
                 <div key={item.id} className='row border-bottom py-3' >
-                    <div className='col-10'>
+                    <div className='col-8'>
                         {item.title}
                     </div>
-                    <div className='col-2 '>
+                    <div className='col-4 '>
                         <div className='float-end '>
                             <i className="fa-solid fa-trash delete-icon" onClick={() => onDelete(item.id)}></i>
                         </div>
